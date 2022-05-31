@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<header>
+    <figure>
+        <img src="/assets/img/code-minds.png" alt="Code Minds Logo" />
+    </figure>
+    <nav>
+        <ul>
+            <li>
+                <button class="material-icons-sharp" type="button" (click)="changeTheme(themes[theme])">{{themes[theme]}}_mode</button>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,10 @@
+body.dark {
+    /* LAYOUT */
+    --top-bar-background: #303030;
+    --body-backround: #242424;
+    --main-text-color: #fff;
+    --main-hover-background: rgba(255, 255, 255, 0.1);
+
+    /* POSTS */
+    --post-list-item-background: #444444;
+}

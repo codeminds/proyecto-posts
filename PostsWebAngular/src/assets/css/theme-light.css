@@ -1,0 +1,10 @@
+body.light {
+    /* LAYOUT */
+    --top-bar-background: #f0f0f0;
+    --body-backround: #fcfcfc;
+    --main-text-color: #000;
+    --main-hover-background: rgba(90, 90, 90, 0.1);
+
+    /* POSTS */
+    --post-list-item-background: #eeeeee;
+}
