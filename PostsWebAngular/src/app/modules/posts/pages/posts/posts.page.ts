@@ -14,6 +14,10 @@ export class PostsPage implements OnInit {
   ) { }
 
   public ngOnInit(): void {
+    /* Esta suscripción es sobre el objeto HttpClient de Angular
+    el cuál es un observable especial que se desuscribe al terminar
+    la llamada HTTP, por ende no debemos preocuparnos por que la suscripción
+    quede en memoria después de que el componente sea destruido */
     this.postService.list().subscribe((posts) => {
       this.posts = posts;
     })
