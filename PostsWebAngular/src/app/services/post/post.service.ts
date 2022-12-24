@@ -9,7 +9,15 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  public list(): Observable<any> {
-    return this.http.get('https://jsonplaceholder.typicode.com/posts');
+  public list(): Observable<any[]> {
+    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/posts');
+  }
+
+  public get(id: number): Observable<any> {
+    return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  }
+
+  public getComments(id: number): Observable<any[]> {
+    return this.http.get<any[]>(`https://jsonplaceholder.typicode.com/posts/${id}/comments`);
   }
 }

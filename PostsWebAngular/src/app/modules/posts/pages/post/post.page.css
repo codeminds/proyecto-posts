@@ -1,0 +1,23 @@
+.post {
+   border-bottom: 0.2rem var(--post-list-item-background) solid;
+   padding-bottom: 2rem;
+   position: relative;
+}
+
+button {
+   position: absolute;
+   top: 0.5rem;
+   right: 0.5rem;
+}
+
+.comments {
+   margin-top: 2rem;
+   padding: 1rem;
+   background: var(--post-list-item-background);
+   border-radius: 0.6rem;
+}
+
+li {
+   padding: 0 1rem;
+   margin: 2rem 0;
+}

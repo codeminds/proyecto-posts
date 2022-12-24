@@ -1,0 +1,14 @@
+<section class="post" *ngIf="post">
+   <h1>{{post.title}}</h1>
+   <p>{{post.body}}</p>
+   <button (click)="goBack()">Back to Posts</button>
+</section>
+<section class="comments">
+   <h4>Comments</h4>
+   <ul>
+      <li *ngFor="let comment of comments">
+         <p class="bold">{{comment.email}}</p>
+         <p>{{comment.body}}</p>
+      </li>
+   </ul>
+</section>

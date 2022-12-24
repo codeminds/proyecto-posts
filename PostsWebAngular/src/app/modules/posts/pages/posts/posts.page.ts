@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Post } from '@models/post';
 import { PostService } from '@services/post/post.service';
 
 @Component({
@@ -7,10 +9,11 @@ import { PostService } from '@services/post/post.service';
   styleUrls: ['./posts.page.css']
 })
 export class PostsPage implements OnInit {
-  public posts: any[];
+  public posts: Post[];
 
   constructor(
-    private postService: PostService
+    private postService: PostService,
+    private router: Router
   ) { }
 
   public ngOnInit(): void {
@@ -21,5 +24,9 @@ export class PostsPage implements OnInit {
     this.postService.list().subscribe((posts) => {
       this.posts = posts;
     })
+  }
+
+  public goToPost(id: number) {
+    this.router.navigate([id]);
   }
 }

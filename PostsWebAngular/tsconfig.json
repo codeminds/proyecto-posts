@@ -23,6 +23,7 @@
     ],
     /* Creamos rutas relativas para los imports en el proyecto */
     "paths": {
+      "@models/*": ["src/app/models/*"],
       "@posts/*": ["src/app/modules/posts/*"],
       "@services/*": ["src/app/services/*"],
       "@shared/*": ["src/app/modules/shared/*"]
