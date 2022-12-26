@@ -7,6 +7,23 @@ header {
     justify-content: space-between;
 }
 
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    transition: background-color 0.2s linear;
+}
+
 button {
     border: 0;
     padding: 1rem;
@@ -14,9 +31,10 @@ button {
     border-radius: 0.2rem;
     background: none;
     color: var(--main-text-color);
+    transition: background-color 0.2s linear;
 }
 
-button:hover {
+a:hover, button:hover {
     background: var(--main-hover-background);
 }
 

@@ -1,5 +1,5 @@
 .post {
-   border-bottom: 0.2rem var(--post-list-item-background) solid;
+   border-bottom: 0.2rem solid var(--post-list-item-background);
    padding-bottom: 2rem;
    position: relative;
 }
@@ -8,6 +8,25 @@ button {
    position: absolute;
    top: 0.5rem;
    right: 0.5rem;
+   border: 0;
+   background:var(--post-list-item-background);
+   padding: 0.5rem 1rem;
+   transition: filter 0.2s linear;
+   border-radius: 0.3rem;
+   color: inherit;
+}
+
+button i {
+   font-size: 2rem;
+   vertical-align: middle;
+}
+
+button span {
+   vertical-align: middle;
+}
+
+button:hover {
+   filter: contrast(0.9);
 }
 
 .comments {

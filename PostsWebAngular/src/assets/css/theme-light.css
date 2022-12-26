@@ -3,7 +3,7 @@ la etiqueta <body> tiene la clase "light" */
 body.light {
     /* LAYOUT */
     --top-bar-background: #f0f0f0;
-    --body-backround: #fcfcfc;
+    --body-background: #fcfcfc;
     --main-text-color: #000;
     --main-hover-background: rgba(90, 90, 90, 0.1);
     --color-scrollbar-dark: rgba(255, 255, 255, 0.1);

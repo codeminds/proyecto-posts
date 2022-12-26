@@ -1,7 +1,10 @@
 <section class="post" *ngIf="post">
    <h1>{{post.title}}</h1>
    <p>{{post.body}}</p>
-   <button (click)="goBack()">Back to Posts</button>
+   <button  (click)="goBack()">
+      <i class="material-icons-sharp">keyboard_return</i>
+      <span>Back to Posts</span>
+   </button>
 </section>
 <section class="comments">
    <h4>Comments</h4>
