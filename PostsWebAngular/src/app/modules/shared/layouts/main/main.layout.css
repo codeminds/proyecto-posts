@@ -34,7 +34,7 @@ button {
     transition: background-color 0.2s linear;
 }
 
-a:hover, button:hover {
+a:hover, a.active, button:hover {
     background: var(--main-hover-background);
 }
 

@@ -6,7 +6,16 @@ const routes: Routes = [
   {
     path: '',
     component: MainLayout,
-    loadChildren: () => import('./modules/posts/posts.module').then(m => m.PostsModule)
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./modules/posts/posts.module').then(m => m.PostsModule)
+      },
+      {
+        path: 'gallery',
+        loadChildren: () => import('./modules/gallery/gallery.module').then(m => m.GalleryModule)
+      }
+    ]
   }
 ];
 

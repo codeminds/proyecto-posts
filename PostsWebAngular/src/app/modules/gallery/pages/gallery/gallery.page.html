@@ -1,0 +1,6 @@
+<h1>Gallery</h1>
+<section>
+   <figure *ngFor="let image of images">
+      <img [src]="getImage(image)" loading="lazy" />
+   </figure>
+</section>

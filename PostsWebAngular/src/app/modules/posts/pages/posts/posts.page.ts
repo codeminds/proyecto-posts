@@ -27,6 +27,6 @@ export class PostsPage implements OnInit {
   }
 
   public goToPost(id: number) {
-    this.router.navigate([id]);
+    this.router.navigate(['post', id]);
   }
 }

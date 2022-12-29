@@ -22,10 +22,12 @@ export class PostPage implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router
   ) {
+    this.post = null;
+    this.comments = [];
     this.subscriptions = new Subscription();
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     /* Agregamos la suscripción al BehaviorSubject de tema activo del servicio a
     nuestra colección de suscripciones */
     this.subscriptions.add(this.route.params.subscribe(params => {
