@@ -14,7 +14,9 @@ export class PostsPage implements OnInit {
   constructor(
     private postService: PostService,
     private router: Router
-  ) { }
+  ) { 
+    this.posts = [];
+  }
 
   public ngOnInit(): void {
     /* Esta suscripción es sobre el objeto HttpClient de Angular
