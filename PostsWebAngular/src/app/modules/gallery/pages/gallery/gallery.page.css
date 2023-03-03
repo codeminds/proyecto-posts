@@ -10,5 +10,4 @@ figure {
    border-radius: 0.5rem;
    overflow: hidden;
    box-shadow: 0.3rem 0.3rem 0.5rem -0.3rem var(--main-text-color);
-   max-width: calc(50% - 2rem);
 }

@@ -1,6 +1,7 @@
 .post {
    border-bottom: 0.2rem solid var(--post-list-item-background);
-   padding-bottom: 2rem;
+   padding: 5rem 0 2rem;
+   margin-bottom: 2rem;
    position: relative;
 }
 
@@ -9,11 +10,11 @@ button {
    top: 0.5rem;
    right: 0.5rem;
    border: 0;
-   background:var(--post-list-item-background);
+   background: var(--post-list-item-background);
    padding: 0.5rem 1rem;
-   transition: filter 0.2s linear;
    border-radius: 0.3rem;
    color: inherit;
+   transition: filter 0.2s linear;
 }
 
 button i {
@@ -30,7 +31,6 @@ button:hover {
 }
 
 .comments {
-   margin-top: 2rem;
    padding: 1rem;
    background: var(--post-list-item-background);
    border-radius: 0.6rem;
@@ -39,4 +39,8 @@ button:hover {
 li {
    padding: 0 1rem;
    margin: 2rem 0;
+}
+
+.email {
+   font-weight: bold;
 }

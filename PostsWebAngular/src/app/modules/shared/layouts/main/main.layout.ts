@@ -9,7 +9,6 @@ import { Subscription } from 'rxjs';
 })
 export class MainLayout implements OnInit, OnDestroy {
   public theme: string;
-
   /* Utlizando typescript podemos crear un tipo diccionario con una llave de un 
   que resulta en un valor de otro tipo  */
   public themes: { [key: string]: string };
@@ -18,7 +17,9 @@ export class MainLayout implements OnInit, OnDestroy {
   de observables para poder mantenerlos en una sola colección */
   private subscriptions: Subscription;
 
-  constructor(private layoutService: LayoutService) { 
+  constructor(
+    private layoutService: LayoutService
+  ) {
     this.theme = null;
     /* En nuestro diccionario creamos un mapa de valores de temas
     contrarios para que al tener un tema seleccionado podamos tener
@@ -46,9 +47,9 @@ export class MainLayout implements OnInit, OnDestroy {
     this.subscriptions.unsubscribe();
   }
 
-  /* Con esta función mandamos a cambiar el valor del BehaviorSubject de tema activo
-  el cual notificará a todos sus suscriptores del nuevo cambio */
-  public changeTheme(theme: string) {
-    this.layoutService.themeSubject.next(theme);
+  public changeTheme(): void {
+    /* Con esta función mandamos a cambiar el valor del BehaviorSubject de tema activo
+    el cual notificará a todos sus suscriptores del nuevo cambio */
+    this.layoutService.themeSubject.next(this.themes[this.theme]);
   }
 }

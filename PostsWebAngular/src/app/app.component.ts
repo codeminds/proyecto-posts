@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LayoutService } from '@services/layout/layout.service';
 
 @Component({
@@ -6,8 +6,10 @@ import { LayoutService } from '@services/layout/layout.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  constructor(private layoutService: LayoutService) {}
+export class AppComponent implements OnInit {
+  constructor(
+    private layoutService: LayoutService
+  ){}
 
   public ngOnInit(): void {
     /* Nos suscribimos al Behavior Subject del tema activo para que cada vez

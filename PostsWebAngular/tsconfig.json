@@ -15,14 +15,15 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
     "lib": [
-      "es2020",
+      "ES2022",
       "dom"
     ],
-    /* Creamos rutas relativas para los imports en el proyecto */
     "paths": {
+      "@gallery/*": ["src/app/modules/gallery/*"],
       "@models/*": ["src/app/models/*"],
       "@posts/*": ["src/app/modules/posts/*"],
       "@services/*": ["src/app/services/*"],

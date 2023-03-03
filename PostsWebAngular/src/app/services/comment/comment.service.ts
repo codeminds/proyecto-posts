@@ -5,14 +5,14 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class GalleryService {
+export class CommentService {
 
   constructor(
     private http: HttpClient
   ) { }
 
-  public list(): Observable<any[]>{
-    return this.http.get<any[]>('https://picsum.photos/v2/list', {
+  public list(postId: number): Observable<any[]> {
+    return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`, {
       headers: {
         'Content-Type': 'application/json'
       }

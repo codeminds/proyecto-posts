@@ -7,17 +7,23 @@ import { Observable } from 'rxjs';
 })
 export class PostService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  public list(): Observable<any[]> {
-    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/posts');
+  public list(): Observable<any[]>{
+    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/posts', {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
   }
 
   public get(id: number): Observable<any> {
-    return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts/${id}`);
-  }
-
-  public getComments(id: number): Observable<any[]> {
-    return this.http.get<any[]>(`https://jsonplaceholder.typicode.com/posts/${id}/comments`);
+    return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
   }
 }

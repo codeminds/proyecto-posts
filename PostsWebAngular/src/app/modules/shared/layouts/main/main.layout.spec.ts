@@ -11,9 +11,7 @@ describe('MainLayout', () => {
       declarations: [ MainLayout ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(MainLayout);
     component = fixture.componentInstance;
     fixture.detectChanges();

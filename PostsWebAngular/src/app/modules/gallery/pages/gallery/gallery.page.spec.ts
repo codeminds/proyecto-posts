@@ -11,9 +11,7 @@ describe('GalleryPage', () => {
       declarations: [ GalleryPage ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(GalleryPage);
     component = fixture.componentInstance;
     fixture.detectChanges();

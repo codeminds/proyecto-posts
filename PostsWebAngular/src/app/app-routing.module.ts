@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainLayout } from './modules/shared/layouts/main/main.layout';
+import { MainLayout } from '@shared/layouts/main/main.layout';
 
 const routes: Routes = [
   {
@@ -9,11 +9,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./modules/posts/posts.module').then(m => m.PostsModule)
+        loadChildren: () => import('@posts/posts.module').then(m => m.PostsModule)
       },
       {
         path: 'gallery',
-        loadChildren: () => import('./modules/gallery/gallery.module').then(m => m.GalleryModule)
+        loadChildren: () => import('@gallery/gallery.module').then(m => m.GalleryModule)
       }
     ]
   }

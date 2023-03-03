@@ -1,12 +1,12 @@
 article {
-    padding: 2rem;
-    margin-bottom: 1rem;
-    background: var(--post-list-item-background);
-    border-radius: 0.3rem;
-    cursor: pointer;
-    transition: filter 0.2s linear;
+   padding: 2rem;
+   margin-bottom: 1rem;
+   background: var(--post-list-item-background);
+   border-radius: 0.3rem;
+   cursor: pointer;
+   transition: filter 0.2s linear;
 }
 
 article:hover {
-    filter: contrast(0.9);
+   filter: contrast(0.9)
 }

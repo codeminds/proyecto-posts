@@ -12,9 +12,9 @@ export class PostsPage implements OnInit {
   public posts: Post[];
 
   constructor(
-    private postService: PostService,
+    private postsService: PostService,
     private router: Router
-  ) { 
+  ){
     this.posts = [];
   }
 
@@ -23,12 +23,12 @@ export class PostsPage implements OnInit {
     el cuál es un observable especial que se desuscribe al terminar
     la llamada HTTP, por ende no debemos preocuparnos por que la suscripción
     quede en memoria después de que el componente sea destruido */
-    this.postService.list().subscribe((posts) => {
-      this.posts = posts;
-    })
+    this.postsService.list().subscribe((data) => {
+      this.posts = data;
+    });
   }
 
-  public goToPost(id: number) {
+  public goToPost(id: number): void {
     this.router.navigate(['post', id]);
   }
 }

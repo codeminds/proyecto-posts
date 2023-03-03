@@ -6,12 +6,12 @@ import { GalleryService } from '@services/gallery/gallery.service';
   templateUrl: './gallery.page.html',
   styleUrls: ['./gallery.page.css']
 })
-export class GalleryPage implements OnInit {
+export class GalleryPage implements OnInit{
   public images: number[];
 
   constructor(
     private galleryService: GalleryService
-  ) { 
+  ) {
     this.images = [];
   }
 
@@ -20,12 +20,14 @@ export class GalleryPage implements OnInit {
     el cuál es un observable especial que se desuscribe al terminar
     la llamada HTTP, por ende no debemos preocuparnos por que la suscripción
     quede en memoria después de que el componente sea destruido */
-    this.galleryService.list().subscribe((images) => {
-      this.images = images.map((image) => image.id);
+    this.galleryService.list().subscribe((data) => {
+      this.images = data.map((item) => {
+        return item.id;
+      });
     });
   }
 
-  public getImage(id: number) {
-    return `https://picsum.photos/id/${id}/300/200`;
+  public getImage(id: number): string {
+    return `https://picsum.photos/id/${id}/300/300`;
   }
 }
