@@ -10,3 +10,13 @@ article {
 article:hover {
    filter: contrast(0.9)
 }
+
+input {
+   display: block;
+   width: 100%;
+   padding: 1rem;
+   margin-bottom: 1rem;
+   border: 0.2rem solid var(--post-list-item-background);
+   border-radius: 0.3rem;
+   outline: 0;
+}

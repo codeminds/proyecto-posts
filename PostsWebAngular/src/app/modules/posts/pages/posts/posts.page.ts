@@ -10,12 +10,16 @@ import { PostService } from '@services/post/post.service';
 })
 export class PostsPage implements OnInit {
   public posts: Post[];
+  public filteredPosts: Post[];
+  public filter: string;
 
   constructor(
     private postsService: PostService,
     private router: Router
   ){
     this.posts = [];
+    this.filteredPosts = [];
+    this.filter = '';
   }
 
   public ngOnInit(): void {
@@ -25,7 +29,12 @@ export class PostsPage implements OnInit {
     quede en memoria después de que el componente sea destruido */
     this.postsService.list().subscribe((data) => {
       this.posts = data;
+      this.filteredPosts = data;
     });
+  }
+
+  public filterPosts(): void {
+    this.filteredPosts = this.posts.filter((item) => item.title.includes(this.filter));
   }
 
   public goToPost(id: number): void {
